@@ -5,19 +5,23 @@
  append it to the DOM with the appendChild method. Where does this element go? How can you 
  get it do be added directly after the already existing <p>.*/
 
- const ptag = document.createElement("p");
+ const ptag  = document.createElement("p");
  const ptag2 = document.createElement("p");
  const ptag3 = document.createElement("p");
  const ptag4 = document.createElement("p");
+
  ptag.innerText = "Plant many trees";
- ptag2.innerHTML = "Have a garden";
- ptag3.innerHTML = "Get a small jacuzy or bathtube";
- ptag4.innerHTML = "Adopt a cat";
+ ptag2.innerText = "Have a garden";
+ ptag3.innerText = "Get a small jacuzy or bathtube";
+ ptag4.innerText = "Adopt a cat";
+
+ const newlist = document.querySelector(".list");
+ console.log(newlist);
  
-document.body.appendChild(ptag);
-document.body.appendChild(ptag2);
-document.body.appendChild(ptag3);
-document.body.appendChild(ptag4);
+newlist.appendChild(ptag)
+newlist.appendChild(ptag2);
+newlist.appendChild(ptag3);
+newlist.appendChild(ptag4);
 
 // Uppgift 2
 
