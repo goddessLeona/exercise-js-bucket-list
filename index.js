@@ -16,7 +16,6 @@
  ptag4.innerText = "Adopt a cat";
 
  const newlist = document.querySelector(".list");
- console.log(newlist);
  
 newlist.appendChild(ptag)
 newlist.appendChild(ptag2);
@@ -59,4 +58,20 @@ ptag4.insertAdjacentElement("beforeend", p4) //Now the new item on the list come
 get and set the inner HTML of a HTML element very easy. Try to get (or do you already have it?) 
 the inner HTML from the element that contains all the <p>-tags of your bucket list. Log that to the console.*/
 
+// const newlist = document.querySelector(".list");
+console.log(newlist);
+
+// newlist.innerHTML = ("I do not know what to do");
+// console.log(newlist); 
+
+// it replaced all my items on my bucket list with one new, "I do not know what to do"
+
+// Uppgift 4
+
+/* In order to set the innerHTML of an element we need to create a string that contains the HTML code 
+that we want to add to the DOM. It can look something like this:
+
+"<div>This is a div element as a string</div>";
+
+Now create that string that contains a new item that you want to add to your bucket list.*/
 
