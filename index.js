@@ -75,3 +75,5 @@ that we want to add to the DOM. It can look something like this:
 
 Now create that string that contains a new item that you want to add to your bucket list.*/
 
+let contentList = newlist.innerHTML;
+console.log(contentList);
