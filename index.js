@@ -139,3 +139,31 @@ newName.innerText = "Petra´s"
 /*Replace the first item in your list with a new item. There are several ways to do this, 
 but try the replaceChild method out.*/
 
+const oldPlist = document.querySelector("p");
+const newPlist = document.createElement("p");
+newPlist.innerText = "Get a job after school";
+
+
+newlist.replaceChild(newPlist, oldPlist);
+
+// Uppgift 11
+
+/*Now try replace an element in the middle of the list to a new one. 
+Use the same method as before or get creative.*/
+
+console.log(p2);
+
+const newp2Tag = p2.setAttribute("class","newp2");
+const old = document.querySelector(".newp2");
+
+const replaceNew = document.createElement("p");
+replaceNew.innerText = "Feel good all the time";
+
+newlist.replaceChild(replaceNew,old)
+
+
+// Uppgift 12
+
+// Remove the last element in the list. lastChildElement combine with the removeChild method might work. 
+
+newlist.removeChild(newlist.lastElementChild);
