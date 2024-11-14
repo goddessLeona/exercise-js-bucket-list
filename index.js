@@ -17,7 +17,7 @@
 
  const newlist = document.querySelector(".list");
  
-newlist.appendChild(ptag)
+newlist.appendChild(ptag);
 newlist.appendChild(ptag2);
 newlist.appendChild(ptag3);
 newlist.appendChild(ptag4);
@@ -47,10 +47,13 @@ p2.innerText = "Life energie";
 p3.innerText = "Lots of pinguins";
 p4.innerText = "flowers";
 
-ptag4.insertAdjacentElement("afterbegin",p) // Now the new item on list came 1 over the last item on list
-ptag4.insertAdjacentElement("afterend", p2) // Now the new item on list came under the last item on list
-ptag4.insertAdjacentElement("beforebegin", p3)// Now the new item on the list come 2 items up
-ptag4.insertAdjacentElement("beforeend", p4) //Now the new item on the list comes 1 under the last item on list
+newlist.insertAdjacentElement("afterbegin",p) // Now the new item on list came 1 over the last item on list
+//newlist.insertAdjacentElement("afterend", p2) // end outside the list
+//newlist.insertAdjacentElement("beforebegin", p3)// end outside the list
+newlist.insertAdjacentElement("beforeend", p4) //Now the new item on the list comes 1 under the last item on list
+
+newlist.insertAdjacentElement("beforeend",p3);
+newlist.insertAdjacentElement("beforeend",p2);
 
 // Uppgift 3
 
@@ -77,3 +80,62 @@ Now create that string that contains a new item that you want to add to your buc
 
 let contentList = newlist.innerHTML;
 console.log(contentList);
+
+newPtagAsAString = "<p>Swim in a clean ocean</p>"
+console.log(newPtagAsAString);
+ 
+//newlist.innerHTML += newPtagAsAString;
+
+
+ // Uppgift 5
+
+ /* Set the innerHTML of the list with the new item you just created. What happens when you do that?*/
+
+ //const newContentlist = newlist.innerHTML;
+ //console.log(newContentlist); 
+
+ // Uppgift 6
+ 
+ /* Comment out that previous line(s) of code and the three items that you had before you should exist again. 
+ How can you add that last item and still keep the three other ones? There is a method that is very similar 
+ to the insertAdjecentElement that will take your HTML string and add it to the list. Try to add your new item 
+ to the beginning of the list.*/
+
+ newlist.insertAdjacentHTML("beforeend", newPtagAsAString);
+
+ // Uppgift 7
+
+ /*Add three more items to the end of list, but try and do it with a loop instead. Less repetitive code.*/
+
+string1 = "<p>Go to conserts of my favorite bands</p>"
+string2 = "<p>Drink coconut water on the beach</p>"
+string3 = "<p>See the northern light</p>"
+
+const addToLists = [string1, string2, string3];
+
+for(addToList of addToLists){
+    newlist.insertAdjacentHTML("beforeend", addToList);
+}
+
+console.log(newlist);
+
+// uppgift 8
+
+//How many items do you have in your bucket list now? Log it to the console. Use the children property.
+
+const counteList = newlist.children.length;
+console.log(counteList);
+
+// Uppgift 9
+
+//Change the content of the h2 at the to top of the HTML document do have your name instead of "Bucky's";
+
+const newName = document.querySelector(".owner");
+
+newName.innerText = "Petra´s"
+
+// Uppgift 10
+
+/*Replace the first item in your list with a new item. There are several ways to do this, 
+but try the replaceChild method out.*/
+
